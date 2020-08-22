@@ -1,9 +1,20 @@
 import React from 'react';
+
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import GlobalStyle from "./globalStyles.js";
+import SummaryPane from "./components/SummaryPane";
+
 function App() {
   return (
-    <>
-      <span>Cause effect</span>
-    </>
+    <BrowserRouter>
+      <GlobalStyle />
+      <Switch>
+        <Route path="/">
+          <SummaryPane />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

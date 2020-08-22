@@ -1,0 +1,34 @@
+ul {
+  margin: 0px;
+  position: relative;
+}
+ul > ul::after{
+  content: '';
+  position: absolute;
+  background:white;
+  width: 15px;
+  height: 25px;
+  top: 0.1px;
+  left: -25px;
+}
+ul > ul::before {
+  content: '';
+  position: absolute;
+  background-color: #3d7e9a;
+  width: 12px;
+  height: 12px;
+  top: 5px;
+  left: -18px;
+  transform: rotate(45deg);
+}
+.toggle ul {
+  padding: 0px 16px;
+  animation: all 2s ease;
+}
+.toggle ul li a {
+  color: #3d7e9a;
+}
+ul li a:hover,
+.toggle ul li a:hover {
+  text-decoration: underline;
+}
